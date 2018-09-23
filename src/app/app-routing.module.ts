@@ -15,8 +15,8 @@ import { ItemComponent } from './pages/item/item.component';
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 
 ];
-// decorador de modulo
-@NgModule ({
+
+@NgModule ({// decorador de modulo
     imports: [
         RouterModule.forRoot( app_routes, { useHash: true})
     ],
