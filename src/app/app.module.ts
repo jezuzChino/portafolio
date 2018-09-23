@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule} from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -20,7 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [ // Aqui se colocan los modulos
     BrowserModule,
-    AppRoutingModule // se importa el modulo creado asi como la ruta en la linea 10
+    AppRoutingModule, // se importa el modulo creado asi como la ruta en la linea 10
+    HttpClientModule // permitira realizar peticiones PUT, GET..etc a servidores REST
   ],
   // aqui normalmente se colocan los sevicios haciendo la importacion como si fuera
   // un componente, pero angular en el decorador sel servicio @Injectable
