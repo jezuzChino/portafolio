@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { InfoPageService } from './services/info-page.service';
+import { ProductosService } from './services/productos.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { InfoPageService } from './services/info-page.service';
 })
 export class AppComponent {
 
-  constructor( public _infoPagina: InfoPageService) {
-    // se inyecta servicio puede llevar _ para indicar que es un servicio o "infoPageService"
+  constructor( public _infoPagina: InfoPageService,
+               public _productos: ProductosService) {
+    // se inyecta servicio puede llevar _ para indicar que es un servicio o "nombreDescriptivoService"
 
   }
 }
