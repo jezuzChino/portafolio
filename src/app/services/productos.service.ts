@@ -6,5 +6,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductosService {
 
-  constructor( private http: HttpClient ) { }
+  constructor( private http: HttpClient ) { 
+    this.cargarProductos();
+   }
+
+  private cargarProductos () {
+    this.http.get('https://angular-portafolio-2faeb.firebaseio.com/productos_idx.json')
+      .subscribe( (resp: any[]) => {
+        console.log(resp);
+      });
+  }
 }
