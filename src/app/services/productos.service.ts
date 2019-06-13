@@ -17,8 +17,6 @@ export class ProductosService {
   private cargarProductos () {
     this.http.get('https://angular-portafolio-2faeb.firebaseio.com/productos_idx.json')
       .subscribe( (resp: Producto[]) => {
-        console.log(resp);
-
         this.productos = resp;
         this.cargando = false;
         /* setTimeout(() => {

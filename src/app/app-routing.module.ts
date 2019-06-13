@@ -11,7 +11,7 @@ import { ItemComponent } from './pages/item/item.component';
 
     { path: 'home', component: PortafolioComponent},
     { path: 'about', component: AboutComponent},
-    { path: 'item', component: ItemComponent},
+    { path: 'item/:id/:nombre', component: ItemComponent},
     { path: '**', pathMatch: 'full', redirectTo: 'home'}
 
 ];
