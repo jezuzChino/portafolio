@@ -24,4 +24,8 @@ export class ProductosService {
         }, 2000); */
       });
   }
+
+  getProducto( id: string ) {
+    return this.http.get(`https://angular-portafolio-2faeb.firebaseio.com/productos/${ id }.json`);
+  }
 }
