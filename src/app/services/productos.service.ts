@@ -37,13 +37,13 @@ export class ProductosService {
 
   buscarProducto( termino: string ) {
 
-    if( this.productos.length === 0) {
+    if ( this.productos.length === 0) {
       // cargar productos
       this.cargarProductos().then ( () => {
         // se ejecuta despues de cargar los productos
         // aplicar filtro
         this.filtrarProductos ( termino );
-      })
+      });
     } else {
       // aplicar filtro
         this.filtrarProductos ( termino );
@@ -52,7 +52,7 @@ export class ProductosService {
       return true;
     }); */
 
-    console.log( this.productoFiltro);
+    // console.log( this.productoFiltro);
   }
 
   private filtrarProductos ( termino: string ) {
